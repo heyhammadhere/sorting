@@ -1,0 +1,107 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 1vw;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  color: #36395a;
+  background-color: #ffffff;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+div{
+  border: 0.1vw solid #dadce0;
+  border-radius: 0.25vw;
+  margin-top: 1.5vw;
+  padding: 1.5vw;  
+}
+
+span {
+  background-color: #1a73e8;
+  color: #e8f0fe;
+  font-weight: bold;
+  text-align: center;
+  margin: 0vh 0.25vw;
+  padding: 1vh 0vw;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  transition: height 0.25s ease-in-out;
+  box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.68);
+  -webkit-box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.68);
+}
+
+footer {
+  position: fixed;
+  bottom: 1vw;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > * {
+  margin: 0vh 0.5vw;
+}
+
+button {
+  align-items: center;
+  appearance: none;
+  background-color: #e8f0fe;
+  border-radius: 0.25vw;
+  border: none;  
+  box-sizing: border-box;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 2.5vw;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0vh 1vw;
+  position: relative;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 1.25rem;
+}
+
+button:hover {
+  box-shadow: 0.1vw 0.1vw 0.75vw 0.1vw rgba(0, 0, 0, 0.68);
+  -webkit-box-shadow: 0.1vw 0.1vw 0.75vw 0.1vw rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 0.1vw 0.1vw 0.75vw 0.1vw rgba(0, 0, 0, 0.68);
+  /* box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0; */
+  transform: translateY(-0.25vw);
+}
+
+button:active {
+  /* box-shadow: #d6d6e7 0 3px 7px inset; */
+  transform: translateY(0.25vw);
+}
+
+button:disabled {
+  color: #d6d6e7;
+}
+
+input[type="range"] {    
+  width: 10vw;  
+}
