@@ -1,7 +1,12 @@
 let main = document.querySelector("main");
 let generate = document.querySelector("#generate");
-let sort = document.querySelector("#sort");
-sort.disabled = true;
+let bubbleSort = document.querySelector("#bubbleSort");
+let insertionSort = document.querySelector("#insertionSort");
+let selectionSort = document.querySelector("#selectionSort");
+let mergeSort = document.querySelector("#mergeSort");
+let quickSort = document.querySelector("#quickSort");
+let countSort = document.querySelector("#countSort");
+selectionSort.disabled = true;
 let speed = document.querySelector("#speed");
 let speedInMS = 0;
 let listLength = 50;
@@ -9,7 +14,7 @@ let listLength = 50;
 generate.onclick = async () => {
   main.innerHTML = "";
   generate.disabled = true;
-  sort.disabled = true;
+  selectionSort.disabled = true;
   for (let i = 0; i < listLength; i++) {
     let randomNumber = Math.floor(Math.random() * (75 - 1) + 1);
     await new Promise((resolve, reject) => {
@@ -24,11 +29,11 @@ generate.onclick = async () => {
     });
   }
   generate.disabled = false;
-  sort.disabled = false;
+  selectionSort.disabled = false;
 };
 
-sort.onclick = async () => {
-  sort.disabled = true;
+selectionSort.onclick = async () => {
+  selectionSort.disabled = true;
   let bars = [...document.querySelectorAll("span")];
   let list = [...bars].map((bar) => {
     return parseInt(bar.innerText);
@@ -57,7 +62,7 @@ sort.onclick = async () => {
     }
     bars[i].style["backgroundColor"] = "#34A853";
   }
-  sort.disabled = false;
+  selectionSort.disabled = false;
 };
 
 speed.onchange = (e) => {
