@@ -101,6 +101,11 @@ insertionSort.onclick = async () => {
   let list = [...bars].map((bar) => {
     return parseInt(bar.innerText);
   });
+  await new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve();
+    }, speed);
+  });
   for (let i = 0; i < list.length; i++) {
     key = list[i];
     j = i - 1;
@@ -110,11 +115,6 @@ insertionSort.onclick = async () => {
     }
     list[j + 1] = key;
   }
-  await new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve();
-    }, speed);
-  });
   bubbleSort.disabled = false;
   insertionSort.disabled = false;
   selectionSort.disabled = false;
@@ -213,10 +213,9 @@ quickSort.onclick = async () => {
   insertionSort.disabled = false;
   selectionSort.disabled = false;
   quickSort.disabled = false;
+  console.log(list);
 };
 
 speed.onchange = (e) => {
   speed = parseInt(e.target.value);
 };
-
-console.log(typeof generate.onclick);
